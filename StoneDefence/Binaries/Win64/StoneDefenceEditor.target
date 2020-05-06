@@ -29,6 +29,14 @@
 			"Type": "Executable"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/StoneToolClass/Binaries/Win64/UE4Editor-StoneToolClass.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/StoneToolClass/Binaries/Win64/UE4Editor-StoneToolClass.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2025,6 +2033,10 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/StoneToolClass/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -2344,6 +2356,10 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/StoneDefence.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/StoneToolClass/StoneToolClass.uplugin",
 			"Type": "UFS"
 		},
 		{
