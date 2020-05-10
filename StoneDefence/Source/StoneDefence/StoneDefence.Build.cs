@@ -8,7 +8,7 @@ public class StoneDefence : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore","UMG" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore","UMG", "StoneToolClass" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
