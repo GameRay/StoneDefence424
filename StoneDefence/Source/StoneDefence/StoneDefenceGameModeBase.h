@@ -13,5 +13,5 @@ UCLASS()
 class STONEDEFENCE_API AStoneDefenceGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+	AStoneDefenceGameModeBase();
 };

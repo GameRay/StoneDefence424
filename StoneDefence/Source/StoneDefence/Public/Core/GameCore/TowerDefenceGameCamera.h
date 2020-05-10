@@ -10,7 +10,16 @@ UCLASS()
 class STONEDEFENCE_API ATowerDefenceGameCamera : public APawn
 {
 	GENERATED_BODY()
+//¿ØÖÆÉãÏñ»ú
 
+UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+class USpringArmComponent *CameraBoom;
+
+UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+class UCameraComponent *MainCamera;
+
+UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+class UBoxComponent *MarkBox;
 public:
 	// Sets default values for this pawn's properties
 	ATowerDefenceGameCamera();
@@ -18,11 +27,6 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 

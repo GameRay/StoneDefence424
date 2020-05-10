@@ -2,13 +2,23 @@
 
 
 #include "Core/GameCore/TowerDefenceGameCamera.h"
-
+#include"GameFramework/SpringArmComponent.h"
+#include"Camera/CameraComponent.h"
+#include"Components/BoxComponent.h"
 // Sets default values
 ATowerDefenceGameCamera::ATowerDefenceGameCamera()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
+	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("Boom"));
+	MainCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("Main_Camera"));
+	MarkBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Sign"));
 
+	CameraBoom->AttachToComponent(RootComponent,FAttachmentTransformRules::KeepRelativeTransform);
+	MainCamera->AttachToComponent(CameraBoom, FAttachmentTransformRules::KeepRelativeTransform);
+	MarkBox->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	CameraBoom->TargetArmLength = 800.0f;
+	CameraBoom->SetRelativeRotation(FRotator(-60.0,0.0f,0.0f));
 }
 
 // Called when the game starts or when spawned
@@ -18,12 +28,7 @@ void ATowerDefenceGameCamera::BeginPlay()
 	
 }
 
-// Called every frame
-void ATowerDefenceGameCamera::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 
-}
 
 // Called to bind functionality to input
 void ATowerDefenceGameCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

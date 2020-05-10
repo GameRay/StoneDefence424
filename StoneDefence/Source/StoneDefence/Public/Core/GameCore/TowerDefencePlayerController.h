@@ -13,5 +13,10 @@ UCLASS()
 class STONEDEFENCE_API ATowerDefencePlayerController : public APlayerController
 {
 	GENERATED_BODY()
+public:
+	ATowerDefencePlayerController();
+	
+	virtual void BeginPlay()override;
+	virtual void Tick(float DeltaSeconds)override;
 	
 };
