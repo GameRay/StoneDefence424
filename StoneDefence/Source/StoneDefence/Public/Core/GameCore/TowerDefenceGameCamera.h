@@ -23,7 +23,7 @@ class UBoxComponent *MarkBox;
 public:
 	// Sets default values for this pawn's properties
 	ATowerDefenceGameCamera();
-
+	void Zoom(bool bDirection, const float &ZoomSpeed);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

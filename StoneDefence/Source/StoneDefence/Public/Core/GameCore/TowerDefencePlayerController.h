@@ -19,8 +19,12 @@ public:
 	
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
+	virtual void SetupInputComponent()override;
 	//锁定鼠标
 	void SetInputModeGameAndUI();
+	//鼠标滚轮上下移动
+	void MouseWheelUp();
+	void MouseWheelDown();
 private:
 	FScreenMoveUnits ScreenMoveUnits;
 };
