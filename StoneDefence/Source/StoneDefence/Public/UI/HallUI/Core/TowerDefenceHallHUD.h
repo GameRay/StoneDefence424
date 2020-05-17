@@ -9,9 +9,14 @@
 /**
  * 
  */
+class UUI_MainHall;
 UCLASS()
 class STONEDEFENCE_API ATowerDefenceHallHUD : public AHUD
 {
 	GENERATED_BODY()
-	
+	ATowerDefenceHallHUD();
+	virtual void BeginPlay()override;
+private:
+	TSubclassOf<UUI_MainHall> MainHallClass;
+	UUI_MainHall*MainHall;
 };
