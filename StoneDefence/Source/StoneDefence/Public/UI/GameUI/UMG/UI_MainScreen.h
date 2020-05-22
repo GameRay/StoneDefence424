@@ -13,5 +13,7 @@ UCLASS()
 class STONEDEFENCE_API UUI_MainScreen : public UUI_RuleofTheWidget
 {
 	GENERATED_BODY()
+	//UPROPERTY(meta=(BindWidget))
+	
 	
 };
