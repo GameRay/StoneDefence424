@@ -4,7 +4,14 @@
 
 #include "CoreMinimal.h"
 #include"StoneDefence/Public/UI/Core/UI_RuleofTheWidget.h"
+#include "UI_GameMenuSystem.h"
+#include "UI_GameInfoPrintSystem.h"
+#include "UI_MiniMapSystem.h"
+#include "UI_PlayerSkillSystem.h"
+#include "UI_RucksackSystem.h"
+#include "UI_ToolBarSystem.h"
 #include "UI_MainScreen.generated.h"
+
 
 /**
  * 
@@ -13,7 +20,24 @@ UCLASS()
 class STONEDEFENCE_API UUI_MainScreen : public UUI_RuleofTheWidget
 {
 	GENERATED_BODY()
-	//UPROPERTY(meta=(BindWidget))
-	
-	
+	UPROPERTY(meta = (BindWidget))
+	UUI_GameMenuSystem*GameMenuSystem;
+
+	UPROPERTY(meta = (BindWidget))
+	UUI_GameInfoPrintSystem*GameInfoPrintSystem;
+
+	UPROPERTY(meta = (BindWidget))
+	UUI_MiniMapSystem*MiniMapSystem;
+
+	UPROPERTY(meta = (BindWidget))
+	UUI_PlayerSkillSystem*PlayerSkillSystem;
+
+	UPROPERTY(meta = (BindWidget))
+	UUI_RucksackSystem*RucksackSystem;
+
+	UPROPERTY(meta = (BindWidget))
+	UUI_ToolBarSystem*ToolBarSystem;
+
+public:
+	virtual void NativeConstruct()override;
 };
