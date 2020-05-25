@@ -3,3 +3,13 @@
 
 #include "UI/GameUI/UMG/UI_MissionSystem.h"
 
+void UUI_MissionSystem::NativeConstruct()
+{
+	Super::NativeConstruct();
+	ConditionButton->OnClicked.AddDynamic(this,&UUI_MissionSystem::Condition);
+}
+
+void UUI_MissionSystem::Condition()
+{
+
+}
