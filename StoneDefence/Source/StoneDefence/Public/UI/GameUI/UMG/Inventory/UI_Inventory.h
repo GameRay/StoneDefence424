@@ -4,7 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "UI/Core/UI_RuleofTheWidget.h"
+#include "Components/UniformGridPanel.h"
+#include "UI_InventorySlot.h"
 #include "UI_Inventory.generated.h"
+
+
 
 /**
  * 
@@ -13,5 +17,13 @@ UCLASS()
 class STONEDEFENCE_API UUI_Inventory : public UUI_RuleofTheWidget
 {
 	GENERATED_BODY()
-	
+	UPROPERTY(meta = (BindWidget))
+	UUniformGridPanel*SlotArrayInventory;
+	UPROPERTY(EditDefaultsOnly, Category = UI)
+		TSubclassOf<UUI_InventorySlot>InventorySlotClass;
+public:
+	virtual void NativeConstruct()override;
+	void LoyoutInventorySlot(int32 ColumnNumber,int32 RowNumber);
+private:
+	TArray<UUI_InventorySlot*>InventorySlotArray;
 };
