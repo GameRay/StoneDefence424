@@ -6,7 +6,7 @@
 void UUI_Inventory::NativeConstruct()
 {
 	Super::NativeConstruct();
-	LoyoutInventorySlot(7, 3);
+	LoyoutInventorySlot(3, 7);
 }
 
 void UUI_Inventory::LoyoutInventorySlot(int32 ColumnNumber, int32 RowNumber)

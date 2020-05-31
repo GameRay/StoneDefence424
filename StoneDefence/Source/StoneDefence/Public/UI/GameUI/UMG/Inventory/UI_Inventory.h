@@ -19,11 +19,12 @@ class STONEDEFENCE_API UUI_Inventory : public UUI_RuleofTheWidget
 	GENERATED_BODY()
 	UPROPERTY(meta = (BindWidget))
 	UUniformGridPanel*SlotArrayInventory;
-	UPROPERTY(EditDefaultsOnly, Category = UI)
-		TSubclassOf<UUI_InventorySlot>InventorySlotClass;
+
 public:
 	virtual void NativeConstruct()override;
 	void LoyoutInventorySlot(int32 ColumnNumber,int32 RowNumber);
+	UPROPERTY(EditDefaultsOnly, Category = UI)
+		TSubclassOf<UUI_InventorySlot>InventorySlotClass;
 private:
 	TArray<UUI_InventorySlot*>InventorySlotArray;
 };

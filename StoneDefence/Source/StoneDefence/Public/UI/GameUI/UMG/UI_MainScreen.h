@@ -10,7 +10,9 @@
 #include "UI_PlayerSkillSystem.h"
 #include "UI_RucksackSystem.h"
 #include "UI_ToolBarSystem.h"
+#include "UI_MissionSystem.h"
 #include "UI_MainScreen.generated.h"
+
 
 
 /**
@@ -37,7 +39,8 @@ class STONEDEFENCE_API UUI_MainScreen : public UUI_RuleofTheWidget
 
 	UPROPERTY(meta = (BindWidget))
 	UUI_ToolBarSystem*ToolBarSystem;
-
+	UPROPERTY(meta = (BindWidget))
+	UUI_MissionSystem*MissionSystem;
 public:
 	virtual void NativeConstruct()override;
 };
