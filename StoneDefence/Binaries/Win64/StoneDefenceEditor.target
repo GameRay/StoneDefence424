@@ -37,6 +37,14 @@
 			"Type": "SymbolFile"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/SimpleScreenLoading/Binaries/Win64/UE4Editor-SimpleScreenLoading.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleScreenLoading/Binaries/Win64/UE4Editor-SimpleScreenLoading.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/StoneToolClass/Binaries/Win64/UE4Editor-StoneToolClass.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3993,6 +4001,10 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/SimpleScreenLoading/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/StoneToolClass/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -4316,6 +4328,10 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/StoneDefence.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleScreenLoading/SimpleScreenLoading.uplugin",
 			"Type": "UFS"
 		},
 		{
