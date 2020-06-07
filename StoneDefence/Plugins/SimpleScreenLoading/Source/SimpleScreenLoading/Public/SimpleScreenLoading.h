@@ -12,7 +12,7 @@ public:
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
-
+	SIMPLESCREENLOADING_API void SetupScreenLoading();
 private:
 	void BeginLoadingScreen(const FString&MapName);
 	void EndLoadingScreen(UWorld*World);

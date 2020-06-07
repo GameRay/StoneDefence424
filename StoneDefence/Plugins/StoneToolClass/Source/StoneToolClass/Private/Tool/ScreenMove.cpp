@@ -74,28 +74,28 @@ bool FScreenMoveUnits::MoveDirection(APlayerController * PlayerController, EScre
 		switch (ScreenMoveState)
 		{
 		case Screen_Up:
-			OffsetValue = FVector(ScreenMoveSpeed,0.f,0.f);
+			OffsetValue = FVector(-ScreenMoveSpeed,0.f,0.f);
 			break;
 		case Screen_Down:
-			OffsetValue = FVector(-ScreenMoveSpeed, 0.f, 0.f);
+			OffsetValue = FVector(ScreenMoveSpeed, 0.f, 0.f);
 			break;
 		case Screen_Right:
-			OffsetValue = FVector(0.f,ScreenMoveSpeed, 0.f);
+			OffsetValue = FVector(0.f,-ScreenMoveSpeed, 0.f);
 			break;
 		case Screen_Left:
-			OffsetValue = FVector(0.f, -ScreenMoveSpeed, 0.f);
+			OffsetValue = FVector(0.f, ScreenMoveSpeed, 0.f);
 			break;
 		case Screen_RightAndUp:
-			OffsetValue = FVector(ScreenMoveSpeed,ScreenMoveSpeed, 0.f);
+			OffsetValue = FVector(-ScreenMoveSpeed,-ScreenMoveSpeed, 0.f);
 			break;
 		case Screen_RightAndDown:
-			OffsetValue = FVector(-ScreenMoveSpeed, ScreenMoveSpeed, 0.f);
+			OffsetValue = FVector(ScreenMoveSpeed, -ScreenMoveSpeed, 0.f);
 			break;
 		case Screen_LeftAndUp:
-			OffsetValue = FVector(ScreenMoveSpeed,-ScreenMoveSpeed, 0.f);
+			OffsetValue = FVector(-ScreenMoveSpeed,ScreenMoveSpeed, 0.f);
 			break;
 		case Screen_LeftAndDown:
-			OffsetValue = FVector(-ScreenMoveSpeed,-ScreenMoveSpeed, 0.f);
+			OffsetValue = FVector(ScreenMoveSpeed,ScreenMoveSpeed, 0.f);
 			break;
 		}
 		PlayerController->GetPawn()->AddActorWorldOffset(OffsetValue);

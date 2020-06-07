@@ -2,4 +2,9 @@
 
 
 #include "Core/GameCore/TowerDefenceGameInstance.h"
-
+#include "SimpleScreenLoading.h"
+void UTowerDefenceGameInstance::Init()
+{
+	Super::Init();
+	FSimpleScreenLoadingModule&SimpleScreenLoadingModule =FModuleManager::LoadModuleChecked<FSimpleScreenLoadingModule>("SimpleScreenLoading");
+}

@@ -9,7 +9,9 @@ public:
 	{}
 	SLATE_END_ARGS();
 	
-	void Construct(const FArguments &InAr,const FString MapName);
-
+	void Construct(const FArguments &InAr,const FString& InMapName);
+private:
+	TOptional<float> GetProgress()const;
+	FString MapName;
 };
 
