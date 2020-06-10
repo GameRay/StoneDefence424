@@ -45,6 +45,14 @@
 			"Type": "SymbolFile"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/SimpleTutorial/Binaries/Win64/UE4Editor-SimpleTutorial.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleTutorial/Binaries/Win64/UE4Editor-SimpleTutorial.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/StoneToolClass/Binaries/Win64/UE4Editor-StoneToolClass.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -4005,6 +4013,10 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/SimpleTutorial/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/StoneToolClass/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -4332,6 +4344,10 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/SimpleScreenLoading/SimpleScreenLoading.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleTutorial/SimpleTutorial.uplugin",
 			"Type": "UFS"
 		},
 		{

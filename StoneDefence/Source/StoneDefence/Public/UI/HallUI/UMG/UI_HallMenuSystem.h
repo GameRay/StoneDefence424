@@ -14,8 +14,10 @@ UCLASS()
 class STONEDEFENCE_API UUI_HallMenuSystem : public UUI_RuleofTheWidget
 {
 	GENERATED_BODY()
-		UPROPERTY(meta = (BindWidget))
+	UPROPERTY(meta = (BindWidget))
 		UButton*GameStartButton;
+	UPROPERTY(meta = (BindWidget))
+		UButton*SecretTerritoryButton;
 	UPROPERTY(meta = (BindWidget))
 		UButton*HistoryButton;
 	UPROPERTY(meta = (BindWidget))
@@ -25,11 +27,15 @@ class STONEDEFENCE_API UUI_HallMenuSystem : public UUI_RuleofTheWidget
 	UPROPERTY(meta = (BindWidget))
 		UButton*BrowserButton;
 	UPROPERTY(meta = (BindWidget))
+		UButton*SpecialContentButton;
+	UPROPERTY(meta = (BindWidget))
 		UButton*QuitGameButton;
 public:
 	virtual void NativeConstruct()override;
 	UFUNCTION()
 	void GameStart();
+	UFUNCTION()
+	void SecretTerritory();
 	UFUNCTION()
 	void History();
 	UFUNCTION()
@@ -38,6 +44,8 @@ public:
 	void TutorWebsite();
 	UFUNCTION()
 	void Browser();
+	UFUNCTION()
+	void SpecialContent();
 	UFUNCTION()
 	void QuitGame();
 };
