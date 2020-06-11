@@ -37,6 +37,22 @@
 			"Type": "SymbolFile"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/SimpleArchives/Binaries/Win64/UE4Editor-SimpleArchives.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleArchives/Binaries/Win64/UE4Editor-SimpleArchives.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleGameSettings/Binaries/Win64/UE4Editor-SimpleGameSettings.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleGameSettings/Binaries/Win64/UE4Editor-SimpleGameSettings.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/SimpleScreenLoading/Binaries/Win64/UE4Editor-SimpleScreenLoading.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -4009,6 +4025,14 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/SimpleArchives/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleGameSettings/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/SimpleScreenLoading/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -4340,6 +4364,14 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/StoneDefence.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleArchives/SimpleArchives.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/SimpleGameSettings/SimpleGameSettings.uplugin",
 			"Type": "UFS"
 		},
 		{
