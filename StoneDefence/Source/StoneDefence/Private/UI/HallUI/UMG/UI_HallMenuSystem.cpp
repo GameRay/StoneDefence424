@@ -3,53 +3,50 @@
 
 #include "UI/HallUI/UMG/UI_HallMenuSystem.h"
 #include"UMG/Public/Components/Button.h"
-#include "Kismet/GameplayStatics.h"
 
 void UUI_HallMenuSystem::NativeConstruct()
 {
 	Super::NativeConstruct();
-	GameStartButton->OnClicked.AddDynamic(this,&UUI_HallMenuSystem::GameStart);
-	SecretTerritoryButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::SecretTerritory);
-	HistoryButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::History);
-	TutorWebsiteButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::TutorWebsite);
-	GameSettingsButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::GameSettings);
-	BrowserButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::Browser);
-	SpecialContentButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::SpecialContent);
-	QuitGameButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::QuitGame);
 
 }
 
-void UUI_HallMenuSystem::GameStart()
+void UUI_HallMenuSystem::BindGameStart(FOnButtonClickedEvent ClickedEvent)
 {
-	UGameplayStatics::OpenLevel(GetWorld(), "SelectLevel");
+	GameStartButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::SecretTerritory()
+void UUI_HallMenuSystem::BindSecretTerritory(FOnButtonClickedEvent ClickedEvent)
 {
-
+	SecretTerritoryButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::History()
+void UUI_HallMenuSystem::BindHistory(FOnButtonClickedEvent ClickedEvent)
 {
+	HistoryButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::TutorWebsite()
+void UUI_HallMenuSystem::BindGameSettings(FOnButtonClickedEvent ClickedEvent)
 {
+	GameSettingsButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::GameSettings()
+void UUI_HallMenuSystem::BindTutorWebsite(FOnButtonClickedEvent ClickedEvent)
 {
+	TutorWebsiteButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::Browser()
+void UUI_HallMenuSystem::BindBrowser(FOnButtonClickedEvent ClickedEvent)
 {
+	BrowserButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::SpecialContent()
+void UUI_HallMenuSystem::BindSpecialContent(FOnButtonClickedEvent ClickedEvent)
 {
-
+	SpecialContentButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::QuitGame()
+void UUI_HallMenuSystem::BindQuitGame(FOnButtonClickedEvent ClickedEvent)
 {
+	QuitGameButton->OnClicked = ClickedEvent;
 }
+
