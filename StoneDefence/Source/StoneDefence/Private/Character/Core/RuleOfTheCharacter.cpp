@@ -4,7 +4,7 @@
 #include "Character/Core/RuleOfTheCharacter.h"
 
 // Sets default values
-ARuleOfTheCharacter::ARuleOfTheCharacter()
+ARuleOfTheCharacter::ARuleOfTheCharacter():bAttack(false)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;

@@ -39,6 +39,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)override;
+public:
+	UFUNCTION(Blueprintable, BlueprintPure)
+	bool IsActive() {return IsDeath();};
 protected:
 	virtual bool IsDeath();
 	virtual float GetHealth();
@@ -50,4 +53,7 @@ public:
 
 	FORCEINLINE USceneComponent*GetHomingPoint() { return HomingPoint; };
 	FORCEINLINE UArrowComponent*GetFirePoint() { return OpenFirePoint; };
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool bAttack;
 };

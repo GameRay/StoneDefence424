@@ -23,8 +23,7 @@ class STONEDEFENCE_API ATowers : public ARuleOfTheCharacter
 	UDestructibleComponent*DestructibleMeshBuilding;
 public:
 	ATowers();
-	UFUNCTION(Blueprintable,BlueprintPure,Category="Towers|Attribute")
-		bool IsActive() { return IsDeath(); }
+
 protected:
 	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)override;
 public:
